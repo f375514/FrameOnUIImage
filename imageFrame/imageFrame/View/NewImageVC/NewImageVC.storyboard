@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--New ImageVC-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="NewImageVC" id="Y6W-OH-hqX" customClass="NewImageVC" customModule="imageFrame" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="md5-tS-Ib7">
+                                <rect key="frame" x="0.0" y="115" width="393" height="479"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cUV-X2-azG">
+                                <rect key="frame" x="96.666666666666686" y="654" width="200" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="82g-as-0ZT"/>
+                                    <constraint firstAttribute="height" constant="50" id="pHa-2g-c8R"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Download">
+                                    <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle1"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="downloadAction:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="SLq-xw-sZr"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T0t-K2-PR1">
+                                <rect key="frame" x="16" y="59" width="50" height="34.333333333333343"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="arrow.backward" catalog="system">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" weight="bold"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="backAction:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="guv-T3-N8R"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="T0t-K2-PR1" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="0jy-9i-8vw"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="md5-tS-Ib7" secondAttribute="trailing" id="5qP-fM-ELf"/>
+                            <constraint firstItem="T0t-K2-PR1" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="6ZV-I4-klu"/>
+                            <constraint firstItem="md5-tS-Ib7" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" constant="-71.5" id="7Bg-PF-y17"/>
+                            <constraint firstItem="md5-tS-Ib7" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="56" id="Jaq-HC-rUm"/>
+                            <constraint firstItem="cUV-X2-azG" firstAttribute="top" secondItem="md5-tS-Ib7" secondAttribute="bottom" constant="60" id="cXK-iS-mzC"/>
+                            <constraint firstItem="md5-tS-Ib7" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="cwQ-mb-A2a"/>
+                            <constraint firstItem="md5-tS-Ib7" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="z6o-e5-uHA"/>
+                            <constraint firstItem="cUV-X2-azG" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="zdB-B3-ggZ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="newImage" destination="md5-tS-Ib7" id="nlG-uA-NwI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="38.931297709923662" y="3.5211267605633805"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="arrow.backward" catalog="system" width="128" height="95"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
